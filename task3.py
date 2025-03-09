@@ -13,7 +13,7 @@ def normalize_phone(phone_number):
     # Видаляю всі символи, крім цифр та '+'
     cleaned_number = re.sub(r'[^\d+]', '', phone_number)
     
-    # Якщо номер починається з '+', значить міжнародний код вже присутній
+    # Якщо номер починається з '+', значить міжнародний код  вже присутній
     if cleaned_number.startswith('+'):
         return cleaned_number
     
@@ -47,3 +47,4 @@ if __name__ == "__main__":
     sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
     print("Нормалізовані номери телефонів для SMS-розсилки:", sanitized_numbers)
 
+# Function to normalize phone numbers
